@@ -1,10 +1,13 @@
-const playingDice = function () {
-    const numberOfDices = parseInt(prompt("Please enter the number of dice."));
-    const numberOfFaces = parseInt(prompt("Please enter the number of faces on the dice"));
+const playingDice = function (number1, number2) {
+    const numberOfDices = parseInt(number1);
+    const numberOfFaces = parseInt(number2);
+    
+    if (Number.isNaN(numberOfDices) || Number.isNaN(numberOfFaces)) {
+        return 'Please enter a number';
+    }
     const dices = []
     for (let i = 1; i <= numberOfDices; i++) {
         dices.push(Math.floor(Math.random() * numberOfFaces) + 1);
     }
     return dices;
 }
-console.log(playingDice());
