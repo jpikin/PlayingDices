@@ -11,3 +11,5 @@ const playingDice = function (number1, number2) {
     }
     return dices;
 }
+
+module.exports = {playingDice};
